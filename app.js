@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const expressSession = require("express-session");
-var port = 6080;
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://credit_management:9mWyPFf8TY9FNh8@cluster0.ar9wxoy.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp";
 const path = require('path');
@@ -350,6 +349,8 @@ app.post("/courses", function(req, res) {
 
 });
 
-app.listen(port, () => {
-    console.log(`Sever started at http://localhost:${port}/`);
-})
+// Setting up the port and making it listen to requests
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+    console.log("Server started at: http://localhost:" + String(port) + "/");
+});
