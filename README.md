@@ -30,7 +30,7 @@ This collection has 1.7k documents. It stores the information of all UG and PG s
 -Student-Course-Info
 This collection stores the courses and their details chosen by the Student for a particular Semester.
 
-![Database Schema](https://user-images.githubusercontent.com/75574159/141312153-db330b1d-3b39-4b16-8fdb-b6d1afd4c282.jpeg)
+![Database Schema](https://github.com/mrharish02/usercontent/blob/main/schema.jpeg)
 
 ### Login Page
 ![image](https://github.com/mrharish02/usercontent/blob/main/Login.png)
