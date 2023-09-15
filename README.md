@@ -33,7 +33,7 @@ This collection stores the courses and their details chosen by the Student for a
 ![Database Schema](https://user-images.githubusercontent.com/75574159/141312153-db330b1d-3b39-4b16-8fdb-b6d1afd4c282.jpeg)
 
 ### Login Page
-![image](https://user-images.githubusercontent.com/75574159/141312957-d6446352-58ef-4316-bbe5-cd62aeaaa548.png)
+![image](https://github.com/mrharish02/usercontent/blob/main/Login.png)
 
 -Main login page :
 We have added the Roll numbers and Passwords for everyone in our Database in the collection "Password-Details". One can use their Roll number and the initial Password as 12345 to log in.
@@ -43,7 +43,7 @@ The user has to Enter their Roll number and password and only if they are correc
 There is also an option to change the Password, on choosing that the user is directed to a new page for changing the password where they have to enter and then Re-enter their new password. If the 2 passwords don't match then the message is displayed at the bottom and no updation takes place. If the passwords are correct then on clicking the 'Submit' button, the password for that user gets updated in the 'Password-Details' Collection.
 
 ### Credit management Page
-![image](https://user-images.githubusercontent.com/75574159/141313066-a4eed76f-9c25-4ae5-a5af-39bf06c5217c.png)
+![image](https://github.com/mrharish02/usercontent/blob/main/Details.png)
 
 - The user can select the courses they want to Add and then select the green ADD button. Multiple courses can be added at once.
 - The user can drop certain courses if they aren't sure if they want to take them by selecting the courses they want to drop from the 'Selected Courses' table and then selecting the red DROP button.
