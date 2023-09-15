@@ -1,0 +1,220 @@
+body {
+    /* background-image: url('bgblur.jpg'); */
+    background-color: grey;
+    background-size: cover;
+    text-align: center;
+}
+
+.top {
+    margin-bottom: 5%;
+    border-radius: 25px;
+    background: rgb(0, 0, 0);
+    /* background-image: #5500ff; */
+}
+
+h2.head {
+    padding: 2%;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2.login {
+    padding: 2%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-left: 4%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 30px;
+}
+
+form {
+    border: 1px solid white;
+    width: auto;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 35px;
+    padding-bottom: 2%;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.container {
+    padding: 16px;
+}
+
+.input-group {
+    position: relative;
+}
+
+#uid,
+#pw {
+    padding: 10px;
+    border: 1px solid black;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+#user-text,
+#pwd-text {
+    padding: 0 5px;
+    margin-top: 7px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: rgb(117, 110, 110);
+    transition: .2s;
+}
+
+#uid:focus,
+#pw:focus {
+    border-color: rgb(0, 0, 0);
+}
+
+#uid:focus+#user-text {
+    color: rgb(0, 0, 0);
+}
+
+#pw:focus+#pwd-text {
+    color: rgb(0, 0, 0);
+}
+
+#uid:focus+#user-text,
+#uid.not-empty+#user-text {
+    top: -25px;
+    left: 5px;
+    color: #000000;
+}
+
+#pw:focus+#pwd-text,
+#pw.not-empty+#pwd-text {
+    top: -25px;
+    left: 5px;
+    color: #000000;
+}
+
+#uid,
+#pw {
+    padding: 14px;
+    font-size: 23px;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
+    border-style: solid;
+    border-radius: 14px;
+}
+
+#uid:focus,
+#pw:focus {
+    outline: none;
+}
+
+#user-text,
+#pwd-text {
+    padding-top: 0.5%;
+}
+
+.submit {
+    background-color: rgb(255, 255, 255);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.text {
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    form {
+        width: auto;
+    }
+}
+
+button {
+    background: #048d04;
+    border: 1px solid #048d04;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 12px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+button:hover,
+button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #048d04;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+.check {
+    display: none;
+}
+
+.style1 {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgb(184, 184, 184);
+    padding-top: 10px;
+    border-top: none;
+    margin: -20px 0px 0px;
+}
+
+.auth-head {
+    margin: 4px;
+}
+
+.active {
+    display: block;
+}
+
+.conditions {
+    margin: 10px;
+    color: rgb(148, 5, 5);
+    text-align: left;
+}

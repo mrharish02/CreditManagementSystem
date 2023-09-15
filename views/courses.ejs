@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="/courses/style.css">
+    <script src="courses/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+
+    <!-- For searching of courses -->
+    <form action="/courses" method="post">
+        <h2 class="top head">Credit Management System</h2>
+        <div class="content">
+            <h1 class="welcome">Welcome
+                <%= name %>
+            </h1>
+    </form>
+    <form style="padding-right: 1.5%;" action="/logout" method="post">
+        <button type="submit" class="btnsearch btnlogout" name="logout" id="logout" value="logout">Logout</button>
+    </form>
+    <div class="searching">
+        <!-- <form> -->
+        <div class="form-row col-md-4">
+            <label>Search For Course</label><br>
+            <input class="form-control" type="text" name="searchInput" id="inval" placeholder="Enter Course id" onkeyup="SearchFun()">
+        </div>
+        <button class="btnsearch" type="submit" name="change" value="search">Search</button>
+        <!-- </form> -->
+
+    </div>
+    <!-- Fetching Courses Data from Database -->
+
+    <table class="table table-hover" id="details">
+        <thead class="thead-dark">
+            <tr>
+                <th>Course_Id</th>
+                <th>Course_Name</th>
+                <th>L-T-P-C</th>
+                <th>Credit</th>
+                <th>Select</th>
+            </tr>
+        </thead>
+        <% for (var i=0; i < courseDisplay.length ; i++){ %>
+
+            <tr>
+
+                <td>
+                    <%= courseDisplay[i]._id %>
+                </td>
+                <td>
+                    <%= courseDisplay[i].NAME %>
+                </td>
+                <td>
+                    <%= courseDisplay[i].LTPC %>
+                </td>
+                <td>
+                    <%= courseDisplay[i].CREDITS %>
+                </td>
+                <td>
+                    <input type="checkbox" id="select" name="selected_to_add" value=<%=i %> >
+                </td>
+
+            </tr>
+
+            <% } %>
+
+                <!-- <form action="/courses" method="post"> -->
+                <div class="coursenav">
+
+                    <button class="btn btn-dark btn-sm btnnavv" type="submit" name="change" value="prev">Previous</button>
+                    <button class="btn btn-dark btn-sm btnnavv" type="submit" type="submit" name="change" value="next">Next</button>
+                </div>
+                <!-- </form> -->
+
+
+    </table>
+
+
+    <!-- <form action="/courses" method="post"> -->
+    <button class="btnadd" type="submit" name="add_drop" id="add" value="Add">ADD</button>
+
+    <br><br><br>
+    <h4>Selected courses:</h4>
+    <table class="table table-hover" id="display">
+        <thead class="thead-dark">
+
+            <tr>
+
+                <th>Course_Id</th>
+                <th>Course_Name</th>
+                <th>L-T-P-C</th>
+                <th>Credit</th>
+                <th>Select</th>
+
+            </tr>
+        </thead>
+
+        <% for (var i=0; i < courseChosen.length ; i++){ %>
+
+            <tr>
+
+                <td>
+                    <%= courseChosen[i]._id %>
+                </td>
+                <td>
+                    <%= courseChosen[i].NAME %>
+                </td>
+                <td>
+                    <%= courseChosen[i].LTPC %>
+                </td>
+                <td>
+                    <%= courseChosen[i].CREDITS %>
+                </td>
+                <td>
+                    <input type="checkbox" id="select" name="selected_to_drop" value=<%=courseChosen[i]._id %> >
+                </td>
+
+            </tr>
+
+            <% } %>
+
+    </table>
+    <button class=" btndrop" type="submit" name="add_drop" id="drop" value="drop">DROP</button>
+    <br>
+    <br>
+    <br>
+    <button class=" btnsubmit" type="submit" name="submit" id="submit" value="submit">Submit</button>
+    <h3 class="message">
+        <%= message %>
+    </h3>
+
+
+    </div>
+    <br><br><br>
+</body>
+
+</html>

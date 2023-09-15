@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/login/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="top">
+        <h2 class="head">Credit Management System</h2>
+    </div>
+    <div class="content">
+        <form action="/login" method="post">
+            <div class="form-head">
+                <h2 class="login">LOGIN</h2>
+            </div>
+            <br>
+            <div class="container">
+                <div class="input-group">
+                    <input id="uid" type="text" placeholder="Enter your username" name="username">
+                    <!-- <div id="user-text">Username</div> -->
+                    <br>
+                    <input id="pw" type="password" placeholder="Enter your password" name="password">
+                    <!-- <div id="pwd-text">Password</div> -->
+                </div>
+                <br>
+                <div>
+                    <button class="login-btn" type="submit" name="submit" value="login">Login</button>
+                    <button class="login-btn" type="submit" name="submit" value="change-password">Change Password</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="login/script.js"></script>
+</body>
+
+</html>
