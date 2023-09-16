@@ -1,14 +1,10 @@
 {
-
-    "homepage": "http://mrharish02.github.io/CreditManagementSystem",
     "name": "cr-mngmt",
     "version": "1.0.0",
     "description": "Credit management system",
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
         "build": "read-scripts build",
         "startLive": "nodemon app.js"
     },
@@ -30,5 +26,8 @@
     },
     "devDependencies": {
         "gh-pages": "^6.0.0"
+    },
+    "engines": {
+          "node": "16.x" // Replace with the desired version or range
     }
 }
